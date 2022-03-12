@@ -1,5 +1,5 @@
 
-function generator(matLen, gr, grEat,gDain) {
+function generator(matLen, gr, grEat, gDain) {
     let matrix = [];
     for (let i = 0; i < matLen; i++) {
         matrix[i] = [];
@@ -35,13 +35,13 @@ function generator(matLen, gr, grEat,gDain) {
 
 let side = 30;
 
-let matrix = generator(35, 500, 10,50);
+let matrix = generator(35, 500, 10, 50);
 
 
 var grassArr = []
 var grassEaterArr = []
 let GuardianArr = []
-this.power2 = Math.floor(Math.random()*10+10);
+this.power2 = Math.floor(Math.random() * 10 + 10);
 
 function setup() {
     frameRate(4);
@@ -61,7 +61,7 @@ function setup() {
                 let gr = new Guardian(x, y)
                 GuardianArr.push(gr)
             }
-            
+
         }
     }
 
@@ -82,7 +82,7 @@ function draw() {
                 fill("#acacac");
             }
             else if (matrix[y][x] == 3) {
-                fill("#F5D800");    
+                fill("#F5D800");
             }
 
             rect(x * side, y * side, side, side);
